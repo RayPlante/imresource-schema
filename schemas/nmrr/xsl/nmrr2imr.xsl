@@ -287,46 +287,9 @@
       <xsl:param name="sp"/>
       <xsl:param name="step"/>
 
-      <xsl:call-template name="split_para">
-        <xsl:with-param name="elname">description</xsl:with-param>
-        <xsl:with-param name="text" select="."/>
-        <xsl:with-param name="sp" select="$sp"/>
-        <xsl:with-param name="step" select="$step"/>
-      </xsl:call-template>
+      <xsl:value-of select="$sp"/>
 
-   </xsl:template>
-
-   <xsl:template name="split_para">
-     <xsl:param name="elname">description</xsl:param>
-     <xsl:param name="text"/>
-     <xsl:param name="sp"/>
-     <xsl:param name="step"/>
-
-     <xsl:variable name="p"><xsl:text>
-
-</xsl:text></xsl:variable>
-
-     <xsl:choose>
-       <xsl:when test="contains($text,$p)">
-
-         <xsl:value-of select="$sp"/>
-         <description>
-           <xsl:value-of select="substring-before($text,$p)"/>
-         </description>
-
-         <xsl:call-template name="split_para">
-           <xsl:with-param name="elname" select="$elname"/>
-           <xsl:with-param name="text" 
-                           select="substring-after($text,$p)"/>
-           <xsl:with-param name="sp" select="$sp"/>
-           <xsl:with-param name="step" select="$step"/>
-         </xsl:call-template>
-       </xsl:when>
-       <xsl:otherwise>
-         <xsl:value-of select="$sp"/>
-         <description><xsl:value-of select="$text"/></description>
-       </xsl:otherwise>
-     </xsl:choose>
+      <description><xsl:value-of select="."/></description>
    </xsl:template>
 
    <xsl:template match="date" mode="created">
