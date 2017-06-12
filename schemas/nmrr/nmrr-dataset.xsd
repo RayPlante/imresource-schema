@@ -1267,6 +1267,17 @@
          </xs:annotation>
        </xs:enumeration>
 
+       <xs:enumeration value="critical literature review">
+         <xs:annotation>
+           <xs:documentation>
+             The reported values are compiled through a critical review of
+             values reported in the peer-reviewed literature; values are
+             accompanied by citations to sources from which the values are
+             drawn.
+           </xs:documentation>
+         </xs:annotation>
+       </xs:enumeration>
+
      </xs:restriction>
    </xs:simpleType>
 

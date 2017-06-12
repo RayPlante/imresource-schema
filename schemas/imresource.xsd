@@ -1541,6 +1541,17 @@
          </xs:annotation>
        </xs:enumeration>
 
+       <xs:enumeration value="unevaluated">
+         <xs:annotation>
+           <xs:documentation>
+             The data presented has not been critically evaluated but
+             is shared as-is.  The description or documentation should
+             be consulted to understand its fitness for particular
+             applications.  
+           </xs:documentation>
+         </xs:annotation>
+       </xs:enumeration>
+
      </xs:restriction>
    </xs:simpleType>
 
